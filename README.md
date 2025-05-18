@@ -2,8 +2,8 @@
 
 Group Members:
 
-*
-*
-*
+* Jingwei Zhao
+* Jyovika Aswale
+* Rimlan Alva
 
 Topic: 
