@@ -1,0 +1,21 @@
+---
+title: "Report"
+format: pdf
+editor: visual
+---
+
+# Title and authors: 
+
+# Table of contents: 
+
+# Executive summary: 
+
+# Introduction: 
+
+# Methodology: 
+
+# Results: 
+
+# Discussion, conclusion and recommendations:
+
+# Reference section: 
