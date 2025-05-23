@@ -6,4 +6,4 @@ Group Members:
 * Jyovika Aswale
 * Rimlan Alva
 
-Topic: 
+Topic: Do routes with higher circuity (i.e. more indirect paths) command a higher fare per mile compared to near-straight flights?
