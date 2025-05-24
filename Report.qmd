@@ -45,5 +45,5 @@ editor: visual
 
 2. *Data Overview: The Origin and Destination Survey (DB1B) – Air Lab.*, from <https://airlab.fiu.edu/data-overview-the-origin-and-destination-survey-db1b/>
 
-
+I acknowledge that I have used AI-assisted tools to support my learning process in coding and improving my written English. These tools have helped me understand programming concepts, refine my code, and enhance my academic writing. However, all critical thinking, analysis, and final decisions in this assignment are my own, ensuring that I have fairly and ethically used AI as a learning aid rather than a substitute for my own work.
 
