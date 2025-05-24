@@ -1,0 +1,30 @@
+---
+title: "Impact of Route Efficiency and Stopovers on Airline Fare Pricing"
+author:
+  - Jingwei Zhao
+  - Jyovika Aswale
+  - Rimlan Alva
+format: revealjs
+editor: visual
+---
+
+# Problem introduction
+
+
+
+# Dataset description
+
+
+
+# Methodology
+
+- Computed fare per mile.
+- Grouped by circuity (high/low) and flight type.
+- Compared mean fares.
+- Plotted distributions and summary table.
+
+# Results
+
+
+
+# Conclusions and/or recommendations
