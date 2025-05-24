@@ -1,0 +1,27 @@
+---
+title: "Impact of Route Efficiency and Stopovers on Airline Fare Pricing"
+author:
+  - Jingwei Zhao
+  - Jyovika Aswale
+  - Rimlan Alva
+format: revealjs
+editor: visual
+---
+
+# Problem introduction
+
+# Dataset description
+
+# Methods
+
+# Results
+::: {.columns}
+::: {.column width="60%"}
+
+- Nonstop, low circuity flights: highest fare per mile (**0.247**)
+- High circuity, with stops: higher fare (**0.173**) than low circuity, with stops (**0.161**)
+- No nonstop flights in high circuity group
+- Table and plot highlight clear pricing patterns
+
+
+# Conclusions and/or recommendations
