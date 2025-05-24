@@ -41,6 +41,9 @@ editor: visual
 
 # Reference section: 
 
+1. *Airline Market Fare Prediction Data.*, from <https://www.kaggle.com/datasets/orvile/airline-market-fare-prediction-data>
+
+2. *Data Overview: The Origin and Destination Survey (DB1B) – Air Lab.*, from <https://airlab.fiu.edu/data-overview-the-origin-and-destination-survey-db1b/>
 
 
 
