@@ -71,6 +71,19 @@ kable(
   row_spec(0, bold = TRUE, color = "white", background = "#80DEEA")
 ```
 
+To further illustrate these relationships, we created a violin plot displaying the distribution of fare per mile across circuity and flight type categories. This visualization is shown in
+@fig-violin.
+
+```{r fig-violin, echo=FALSE, fig.cap="Distribution of fare per mile by circuity group and stop type (Violin Plot)"}
+ggplot(MarketFarePredictionData, aes(x = CircuityGroup, y = Fare_per_mile, fill = StopType)) +
+  geom_violin(trim = FALSE, alpha = 0.8) +
+  labs(
+    x = "Circuity Group",
+    y = "Fare per Mile",
+    fill = "Flight Type"
+  ) +
+  theme_minimal()
+```
 
 # Results: 
 
