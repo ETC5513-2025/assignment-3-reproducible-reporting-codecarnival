@@ -23,8 +23,53 @@ editor: visual
 
 
 # Methodology: 
+To address our research questions, we analyzed the Airline Market Fare Prediction Data, sourced from the [DB1B dataset](https://www.kaggle.com/datasets/orvile/airline-market-fare-prediction-data). The objectives of our analysis were twofold:  
+1. To determine whether routes with higher circuity—meaning more indirect paths—are associated with higher fare per mile.  
+2. To compare fare per mile between nonstop flights and those with one or more stops.
 
+For each itinerary, we calculated *fare per mile* by dividing `Average_Fare` by `MktMilesFlown`. Circuity was categorized as either "High Circuity" or "Low Circuity," with the median value of the `Circuity` variable serving as the cutoff. Flight type was classified based on the `Non_Stop` column: itineraries coded as `Non_Stop == 1` were labeled "Nonstop," while all others were categorized as "With Stops."
 
+We summarized the average fare per mile for each combination of circuity group and stop type. The results are presented in @tbl-summary below.
+```{r, libraries, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+```{r, load data, echo=FALSE}
+MarketFarePredictionData <- read_csv(here::here("data/MarketFarePredictionData.csv"), show_col_types = FALSE)
+```
+
+```{r,summary table, echo=FALSE}
+MarketFarePredictionData <- MarketFarePredictionData %>%
+  mutate(
+    Fare_per_mile = Average_Fare / MktMilesFlown,
+    CircuityGroup = ifelse(Circuity > median(Circuity, na.rm = TRUE), "High", "Low"),
+    StopType = ifelse(Non_Stop == 1, "Nonstop", "With Stops")
+  )
+
+summary_table <- MarketFarePredictionData %>%
+  group_by(CircuityGroup, StopType) %>%
+  summarize(
+    MeanFarePerMile = mean(Fare_per_mile, na.rm = TRUE),
+    .groups = "drop"
+  )
+```
+
+```{r tbl-summary, echo=FALSE}
+kable(
+  summary_table,
+  caption = "Average fare per mile by circuity group and stop type.",
+  align = c("l", "c", "c"),
+  escape = TRUE
+) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = FALSE,
+    position = "center"
+  ) %>%
+  row_spec(0, bold = TRUE, color = "white", background = "#80DEEA")
+```
 
 
 # Results: 
