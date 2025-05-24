@@ -15,13 +15,29 @@ editor: visual
 # Methods
 
 # Results
-::: {.columns}
-::: {.column width="60%"}
 
+::: {.columns}
+::: {.column width="55%"}
 - Nonstop, low circuity flights: highest fare per mile (**0.247**)
 - High circuity, with stops: higher fare (**0.173**) than low circuity, with stops (**0.161**)
 - No nonstop flights in high circuity group
 - Table and plot highlight clear pricing patterns
+:::
+
+::: {.column width="45%"}
+```{r, echo=FALSE, out.width="100%"}
+ggplot(MarketFarePredictionData, aes(x = CircuityGroup, y = Fare_per_mile, fill = StopType)) +
+  geom_violin(trim = FALSE, alpha = 0.8) +
+  labs(
+    x = "Circuity Group",
+    y = "Fare per Mile",
+    fill = "Flight Type"
+  ) +
+  theme_minimal()
+```
+<span style="font-size: 65%; display: block; text-align: center; margin-top: 0.5em;"> Distribution of fare per mile by circuity group and stop type </span> 
+::: 
+::: 
 
 
 # Conclusions and/or recommendations
