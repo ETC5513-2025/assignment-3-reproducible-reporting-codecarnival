@@ -1,11 +1,16 @@
 ---
 title: "Impact of Route Efficiency and Stopovers on Airline Fare Pricing"
 author:
-  - Jingwei Zhao
-  - Jyovika Aswale
-  - Rimlan Alva
-format: revealjs
-editor: visual
+ - name: "Jingwei Zhao"
+ - name: "Jyovika Aswale"
+ - name: "Rimlan Alva"
+format: 
+  revealjs:
+    width: 1600
+    height: 900
+    margin: 0.05
+    embed-resources: true
+incremental: true
 ---
 
 # Problem introduction
