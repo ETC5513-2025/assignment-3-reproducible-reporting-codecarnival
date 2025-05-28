@@ -41,7 +41,26 @@ Understanding these patterns helps explain airline pricing strategies and sets r
 
 
 # Methods
+- **Data:** Airline Market Fare Prediction (DB1B dataset)
 
+- Calculated fare per mile for each itinerary
+
+- **Grouped routes by:**
+
+  - *Circuity:* High vs Low (median split)
+
+  - *Flight type:* Nonstop vs With Stops (Non_Stop column)
+
+- Summarized mean fare per mile for all groups
+
+- Visualized results with summary table and violin plot
+
+
+# Dataset description
+
+
+
+# Methodology
 
 
 # Results
