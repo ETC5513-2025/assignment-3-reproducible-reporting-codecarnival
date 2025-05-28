@@ -1,46 +1,26 @@
 ---
 title: "Report"
-format: pdf
+format: 
+ pdf :
+    toc: true
+    number-sections: true
+    toc-depth: 2
 editor: visual
 ---
 
-# Title and authors: 
+# Title and authors:
+
+# Executive summary:
+
+This report analyzes airline fare data to uncover key factors influencing ticket prices. Using data from a public Kaggle dataset, we explore how variables like airline, number of stops, and departure time affect fare amounts. Our analysis identifies clear pricing trends based on travel class, airline choice, and route structure. These findings can support consumers in making cost-effective travel decisions and provide insight for airline pricing strategies.
 
 
+# Introduction:
 
+# Methodology:
 
-# Table of contents: 
-
-
-
-
-# Executive summary: 
-
-
-
-
-# Introduction: 
-
-
-
-
-# Methodology: 
-
-
-
-
-# Results: 
-
-
-
+# Results:
 
 # Discussion, conclusion and recommendations:
 
-
-
-
-# Reference section: 
-
-
-
-
+# Reference section:
