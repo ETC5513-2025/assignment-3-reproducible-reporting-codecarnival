@@ -18,7 +18,19 @@ incremental: true
 
 
 # Dataset description
+- 📦 **Source:**  
+  US Department of Transportation — Bureau of Transportation Statistics (BTS)
 
+- 🗂 **Size:**  
+  1,581,278 rows × 26 columns
+
+- 🔍 **Key variables:**  
+  - Route features (circuity, nonstop miles)  
+  - Flight details (carrier, roundtrip, market share)  
+  - Competition (market HHI, LCC presence, multi-airport)
+
+- 💡 **Datasets included:**  
+  DB1B + T-100 (cleaned + merged)
 
 
 # Methods
