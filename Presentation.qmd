@@ -4,7 +4,13 @@ author:
   - Jingwei Zhao
   - Jyovika Aswale
   - Rimlan Alva
-format: revealjs
+format: 
+  revealjs:
+    width: 1600
+    height: 900
+    margin: 0.05
+    embed-resources: true
+    theme: solarized
 editor: visual
 ---
 
@@ -67,6 +73,17 @@ Understanding these patterns helps explain airline pricing strategies and sets r
 
 ::: {.column width="45%"}
 ```{r, echo=FALSE, out.width="100%"}
+library(tidyverse)
+
+MarketFarePredictionData <- read_csv(here::here("data/MarketFarePredictionData.csv"), show_col_types = FALSE)
+
+MarketFarePredictionData <- MarketFarePredictionData %>%
+  mutate(
+    Fare_per_mile = Average_Fare / MktMilesFlown,
+    CircuityGroup = ifelse(Circuity > median(Circuity, na.rm = TRUE), "High", "Low"),
+    StopType = ifelse(Non_Stop == 1, "Nonstop", "With Stops")
+  )
+
 ggplot(MarketFarePredictionData, aes(x = CircuityGroup, y = Fare_per_mile, fill = StopType)) +
   geom_violin(trim = FALSE, alpha = 0.8) +
   labs(
