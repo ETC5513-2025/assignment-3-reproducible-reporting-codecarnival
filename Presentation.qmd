@@ -9,7 +9,19 @@ editor: visual
 ---
 
 # Problem introduction
+✈ **Airline Fare Pricing & Route Efficiency**
 
+The airline industry shows big differences in fare prices, shaped by:
+
+* Route efficiency
+* Flight characteristics
+
+This study explores:
+
+* 💡 Does higher circuity (more indirect paths) mean **higher fare per mile**?
+* 💡 Are **nonstop flights** more expensive than flights with stopovers?
+
+Understanding these patterns helps explain airline pricing strategies and sets realistic fare expectations for travelers.
 
 
 # Dataset description
