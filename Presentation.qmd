@@ -15,60 +15,62 @@ editor: visual
 ---
 
 # Problem introduction
+
 ✈ **Airline Fare Pricing & Route Efficiency**
 
 The airline industry shows big differences in fare prices, shaped by:
 
-* Route efficiency
-* Flight characteristics
+-   Route efficiency
+-   Flight characteristics
 
 This study explores:
 
-* 💡 Does higher circuity (more indirect paths) mean **higher fare per mile**?
-* 💡 Are **nonstop flights** more expensive than flights with stopovers?
+-   💡 Does higher circuity (more indirect paths) mean **higher fare per mile**?
+-   💡 Are **nonstop flights** more expensive than flights with stopovers?
 
 Understanding these patterns helps explain airline pricing strategies and sets realistic fare expectations for travelers.
 
-
 # Dataset description
-- 📦 **Source:**  
-  US Department of Transportation — Bureau of Transportation Statistics (BTS)
 
-- 🗂 **Size:**  
-  1,581,278 rows × 26 columns
+-   📦 **Source:**\
+    US Department of Transportation — Bureau of Transportation Statistics (BTS)
 
-- 🔍 **Key variables:**  
-  - Route features (circuity, nonstop miles)  
-  - Flight details (carrier, roundtrip, market share)  
-  - Competition (market HHI, LCC presence, multi-airport)
+-   🗂 **Size:**\
+    1,581,278 rows × 26 columns
 
-- 💡 **Datasets included:**  
-  DB1B + T-100 (cleaned + merged)
+-   🔍 **Key variables:**
 
+    -   Route features (circuity, nonstop miles)\
+    -   Flight details (carrier, roundtrip, market share)\
+    -   Competition (market HHI, LCC presence, multi-airport)
+
+-   💡 **Datasets included:**\
+    DB1B + T-100 (cleaned + merged)
 
 # Methods
-- **Data:** Airline Market Fare Prediction (DB1B dataset)
 
-- Calculated fare per mile for each itinerary
+-   **Data:** Airline Market Fare Prediction (DB1B dataset)
 
-- **Grouped routes by:**
+-   Calculated fare per mile for each itinerary
 
-  - *Circuity:* High vs Low (median split)
+-   **Grouped routes by:**
 
-  - *Flight type:* Nonstop vs With Stops (Non_Stop column)
+    -   *Circuity:* High vs Low (median split)
 
-- Summarized mean fare per mile for all groups
+    -   *Flight type:* Nonstop vs With Stops (Non_Stop column)
 
-- Visualized results with summary table and violin plot
+-   Summarized mean fare per mile for all groups
+
+-   Visualized results with summary table and violin plot
 
 # Results
 
-::: {.columns}
+::::: columns
 ::: {.column width="55%"}
-- **Nonstop, low circuity flights:** highest fare per mile (**0.247**)
-- **High circuity, with stops:** higher fare (**0.173**) than low circuity, with stops (**0.161**)
-- No nonstop flights in high circuity group
-- Table and plot highlight clear pricing patterns
+-   **Nonstop, low circuity flights:** highest fare per mile (**0.247**)
+-   **High circuity, with stops:** higher fare (**0.173**) than low circuity, with stops (**0.161**)
+-   No nonstop flights in high circuity group
+-   Table and plot highlight clear pricing patterns
 :::
 
 ::: {.column width="45%"}
@@ -93,10 +95,24 @@ ggplot(MarketFarePredictionData, aes(x = CircuityGroup, y = Fare_per_mile, fill 
   ) +
   theme_minimal()
 ```
-<span style="font-size: 65%; display: block; text-align: center; margin-top: 0.5em;"> Distribution of fare per mile by circuity group and stop type </span> 
-::: 
-::: 
 
+[Distribution of fare per mile by circuity group and stop type]{style="font-size: 65%; display: block; text-align: center; margin-top: 0.5em;"}
+:::
+:::::
 
 # Conclusions and/or recommendations
 
+-   ✈️ **Nonstop, low-circuity flights** have the **highest fare per mile** — travelers pay more for speed and convenience.
+-   🔄 **Higher circuity** routes (indirect paths) tend to cost **more per mile**, even with stopovers.
+-   🚫 No nonstop flights exist in high-circuity routes — airlines avoid inefficient direct paths.
+
+📌 **What this means**
+
+-   Fare pricing reflects both **route efficiency** and **flight type**.
+-   **Stopovers** don’t always lead to cheaper fares if the route is highly indirect.
+
+📢 **Recommendations**
+
+-   💰 Budget-conscious travelers: prefer **low-circuity routes with stopovers**.
+-   🧭 Airlines: use circuity and stopover data to **optimize route planning and pricing**.
+-   📊 Analysts: explore **other drivers** of fare variability (e.g., market share, LCC presence).
