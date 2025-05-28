@@ -20,6 +20,40 @@ This report analyzes airline fare data to uncover key factors influencing ticket
 # Methodology:
 
 # Results:
+=======
+title: "Impact of Route Efficiency and Stopovers on Airline Fare Pricing"
+author:
+  - Jingwei Zhao
+  - Jyovika Aswale
+  - Rimlan Alva
+format: pdf
+editor: visual
+---
+# Table of contents: 
+
+
+
+
+# Executive summary: 
+
+
+
+
+# Introduction: 
+
+
+
+
+# Methodology: 
+
+
+
+
+# Results: 
+
+
+
+>>>>>>> 82a1e891b2e2ad9efb0df575065f79fe8a55de34
 
 # Discussion, conclusion and recommendations:
 
