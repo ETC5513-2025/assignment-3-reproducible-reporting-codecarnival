@@ -85,30 +85,26 @@ ggplot(MarketFarePredictionData, aes(x = CircuityGroup, y = Fare_per_mile, fill 
   theme_minimal()
 ```
 
-# Results:
-
-
-# Table of contents: 
-
-
-
-
-# Executive summary: 
-
-
-
-
-# Introduction: 
-
-
-
-
-
-
 # Results: 
 
+Table @tbl-summary presents the mean fare per mile by circuity group and flight type. The analysis demonstrates two key findings. First, routes classified as high circuity with stops have a higher average fare per mile (0.173) than low circuity routes with stops (0.161), suggesting that passengers pay a premium for less direct travel. Second, nonstop flights on low circuity routes exhibit the highest fare per mile (0.247), reflecting a significant price premium for direct, efficient service.
 
+Notably, no nonstop flights are observed within the high circuity group, likely because such routes inherently require one or more stops. Overall, these results indicate that both increased circuity and nonstop service are associated with higher fare per mile, while the lowest fares are found on low circuity, multi-stop itineraries. These findings highlight how airlines price both efficiency and convenience in the market.
 
+```{r tbl-summary, echo=FALSE}
+kable(
+  summary_table,
+  caption = "Average fare per mile by circuity group and stop type.",
+  align = c("l", "c", "c"),
+  escape = TRUE
+) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = FALSE,
+    position = "center"
+  ) %>%
+  row_spec(0, bold = TRUE, color = "white", background = "#80DEEA")
+```
 
 # Discussion, conclusion and recommendations:
 
