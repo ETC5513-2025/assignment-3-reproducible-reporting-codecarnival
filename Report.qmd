@@ -32,10 +32,26 @@ editor: visual
 
 
 
-# Discussion, conclusion and recommendations:
+# Discussion:
+The summary table and violin plot together reveal interesting pricing dynamics. The results show that:
 
+* Among routes with stops, high circuity routes have slightly higher average fare per mile (0.173) compared to low circuity routes (0.161). This suggests that passengers on less direct routes may pay a premium, possibly due to fewer available options or less competition.
+* Nonstop flights on low circuity routes stand out with the highest average fare per mile (0.247), reflecting the premium passengers are willing to pay for direct, efficient service.
+* No nonstop flights are observed in the high circuity group, likely because highly circuitous routes inherently require at least one stop.
 
+The violin plot shows that the spread of fare per mile is generally wider for nonstop flights, indicating greater price variability, possibly influenced by factors like demand, airline competition, or time of booking. Meanwhile, flights with stops tend to cluster around lower average prices, reflecting a more predictable pricing pattern.
 
+These findings align with broader airline industry trends, where efficiency (nonstop service) and convenience often command higher prices, while multi-stop routes cater to more price-sensitive travelers.
+
+# Conclusion:
+This analysis finds that both circuity and flight type play important roles in shaping airfare pricing. High circuity routes with stops tend to cost more per mile than low circuity ones, but the highest per-mile fares are observed on low circuity, nonstop routes. Overall, nonstop service carries a clear price premium, highlighting the value passengers place on directness and convenience.
+
+# Recommendations:
+Based on the findings, the following recommendations are proposed:
+
+* **For travelers:** Passengers seeking to minimize fare per mile should consider multi-stop itineraries, particularly on low circuity routes, where prices tend to be lower and more stable.
+* **For airlines:** There may be opportunities to adjust pricing on high circuity routes, where passengers are already paying a slight premium, by offering promotions or improving efficiency to attract more customers.
+* **For future research:** Further analysis could explore additional factors influencing fare per mile, such as competition intensity, seasonal effects, or route distance, to provide a more comprehensive understanding of airfare pricing dynamics.
 
 # Reference section: 
 
