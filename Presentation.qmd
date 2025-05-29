@@ -50,7 +50,7 @@ Understanding these patterns helps explain airline pricing strategies and sets r
 
 # Methods
 
--   **Data:** Airline Market Fare Prediction 
+-   **Data:** Airline Market Fare Prediction
 
 -   Calculated fare per mile for each itinerary
 
@@ -103,31 +103,26 @@ ggplot(MarketFarePredictionData, aes(x = CircuityGroup, y = Fare_per_mile, fill 
 
 # Conclusions
 
-::::: columns
+:::: columns
 ::: {.column width="65%"}
+-   ✈️ **Nonstop, low-circuity flights** have the **highest fare per mile** — travelers pay more for speed and convenience.
+-   🔁 **Higher circuity** (indirect) routes cost **more per mile**, even when they include stopovers.
+-   🚫 **No nonstop flights** exist in high-circuity routes — airlines avoid inefficient direct paths.
 
-- ✈️ **Nonstop, low-circuity flights** have the **highest fare per mile** — travelers pay more for speed and convenience.
-- 🔁 **Higher circuity** (indirect) routes cost **more per mile**, even when they include stopovers.
-- 🚫 **No nonstop flights** exist in high-circuity routes — airlines avoid inefficient direct paths.
-
-📌 **Key Insight**  
-Fare pricing reflects both **route efficiency** and **flight type**.  
+📌 **Key Insight**\
+Fare pricing reflects both **route efficiency** and **flight type**.\
 Stopovers don’t always reduce fares — especially on inefficient routes.
-
 :::
-:::::
-
+::::
 
 # Recommendations
 
-::::: columns
+:::: columns
 ::: {.column width="60%"}
-
 📢 **Practical Guidance:**
 
-- 💰 **Budget travelers** → choose **low-circuity routes with stopovers** for best value.
-- ✈️ **Airlines** → use circuity data to refine **pricing and route planning**.
-- 📊 **Analysts** → investigate **market share**, **LCC presence**, and **multi-airport markets** as additional drivers of fare differences.
-
+-   💰 **Budget travelers** → choose **low-circuity routes with stopovers** for best value.
+-   ✈️ **Airlines** → use circuity data to refine **pricing and route planning**.
+-   📊 **Analysts** → investigate **market share**, **LCC presence**, and **multi-airport markets** as additional drivers of fare differences.
 :::
-:::::
+::::
