@@ -20,8 +20,13 @@ editor: visual
 
 
 # Introduction: 
+Airline fare pricing is shaped by multiple operational and market factors, including route design, efficiency, and the number of stopovers. One key measure, **circuity**, captures how indirect a flight path is relative to the shortest possible route. Another important factor is whether a flight is **nonstop** or involves one or more stopovers. Travelers often perceive nonstop flights as faster and more convenient, which can influence demand and pricing.
 
+This study focuses on two main research questions:
+(1) Do routes with higher circuity (i.e., more indirect paths) command a higher fare per mile compared to near-straight flights?
+(2) Are nonstop flights more expensive than flights with one or more stops?
 
+Using a large dataset combining U.S. Department of Transportation’s DB1B and T-100 data, this analysis explores how circuity and stopovers influence airline fares across over 1.5 million samples. By investigating these relationships, the study offers insights that are relevant to both consumers making travel decisions and airlines designing pricing strategies.
 
 
 # Methodology: 
