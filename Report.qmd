@@ -4,33 +4,107 @@ author:
   - Jingwei Zhao
   - Jyovika Aswale
   - Rimlan Alva
-format: pdf
+format: 
+ pdf :
+    toc: true
+    number-sections: true
+    toc-depth: 2
 editor: visual
 ---
-# Table of contents: 
 
 
+# Executive summary:
+
+This report analyzes airline fare data to uncover key factors influencing ticket prices. Using data from a public Kaggle dataset, we explore how variables like airline, number of stops, and departure time affect fare amounts. Our analysis identifies clear pricing trends based on travel class, airline choice, and route structure. These findings can support consumers in making cost-effective travel decisions and provide insight for airline pricing strategies.
 
 
-# Executive summary: 
-
-
-
-
-# Introduction: 
-
+# Introduction:
 
 
 
 # Methodology: 
+To address our research questions, we analyzed the Airline Market Fare Prediction Data, sourced from the [DB1B dataset](https://www.kaggle.com/datasets/orvile/airline-market-fare-prediction-data). The objectives of our analysis were twofold:  
+1. To determine whether routes with higher circuity—meaning more indirect paths—are associated with higher fare per mile.  
+2. To compare fare per mile between nonstop flights and those with one or more stops.
 
+For each itinerary, we calculated *fare per mile* by dividing `Average_Fare` by `MktMilesFlown`. Circuity was categorized as either "High Circuity" or "Low Circuity," with the median value of the `Circuity` variable serving as the cutoff. Flight type was classified based on the `Non_Stop` column: itineraries coded as `Non_Stop == 1` were labeled "Nonstop," while all others were categorized as "With Stops."
 
+We summarized the average fare per mile for each combination of circuity group and stop type. The results are presented in @tbl-summary below.
+```{r, libraries, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
 
+```{r, load data, echo=FALSE}
+MarketFarePredictionData <- read_csv(here::here("data/MarketFarePredictionData.csv"), show_col_types = FALSE)
+```
+
+```{r,summary table, echo=FALSE}
+MarketFarePredictionData <- MarketFarePredictionData %>%
+  mutate(
+    Fare_per_mile = Average_Fare / MktMilesFlown,
+    CircuityGroup = ifelse(Circuity > median(Circuity, na.rm = TRUE), "High", "Low"),
+    StopType = ifelse(Non_Stop == 1, "Nonstop", "With Stops")
+  )
+
+summary_table <- MarketFarePredictionData %>%
+  group_by(CircuityGroup, StopType) %>%
+  summarize(
+    MeanFarePerMile = mean(Fare_per_mile, na.rm = TRUE),
+    .groups = "drop"
+  )
+```
+
+```{r tbl-summary, echo=FALSE}
+kable(
+  summary_table,
+  caption = "Average fare per mile by circuity group and stop type.",
+  align = c("l", "c", "c"),
+  escape = TRUE
+) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = FALSE,
+    position = "center"
+  ) %>%
+  row_spec(0, bold = TRUE, color = "white", background = "#80DEEA")
+```
+
+To further illustrate these relationships, we created a violin plot displaying the distribution of fare per mile across circuity and flight type categories. This visualization is shown in
+@fig-violin.
+
+```{r fig-violin, echo=FALSE, fig.cap="Distribution of fare per mile by circuity group and stop type (Violin Plot)"}
+ggplot(MarketFarePredictionData, aes(x = CircuityGroup, y = Fare_per_mile, fill = StopType)) +
+  geom_violin(trim = FALSE, alpha = 0.8) +
+  labs(
+    x = "Circuity Group",
+    y = "Fare per Mile",
+    fill = "Flight Type"
+  ) +
+  theme_minimal()
+```
 
 # Results: 
 
+Table @tbl-summary presents the mean fare per mile by circuity group and flight type. The analysis demonstrates two key findings. First, routes classified as high circuity with stops have a higher average fare per mile (0.173) than low circuity routes with stops (0.161), suggesting that passengers pay a premium for less direct travel. Second, nonstop flights on low circuity routes exhibit the highest fare per mile (0.247), reflecting a significant price premium for direct, efficient service.
 
+Notably, no nonstop flights are observed within the high circuity group, likely because such routes inherently require one or more stops. Overall, these results indicate that both increased circuity and nonstop service are associated with higher fare per mile, while the lowest fares are found on low circuity, multi-stop itineraries. These findings highlight how airlines price both efficiency and convenience in the market.
 
+```{r tbl-summary, echo=FALSE}
+kable(
+  summary_table,
+  caption = "Average fare per mile by circuity group and stop type.",
+  align = c("l", "c", "c"),
+  escape = TRUE
+) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = FALSE,
+    position = "center"
+  ) %>%
+  row_spec(0, bold = TRUE, color = "white", background = "#80DEEA")
+```
 
 # Discussion:
 The summary table and violin plot together reveal interesting pricing dynamics. The results show that:
@@ -55,6 +129,10 @@ Based on the findings, the following recommendations are proposed:
 
 # Reference section: 
 
+1. *Airline Market Fare Prediction Data.*, from <https://www.kaggle.com/datasets/orvile/airline-market-fare-prediction-data>
 
+2. *Data Overview: The Origin and Destination Survey (DB1B) – Air Lab.*, from <https://airlab.fiu.edu/data-overview-the-origin-and-destination-survey-db1b/>
 
+I acknowledge that I have used AI-assisted tools to support my learning process in coding and improving my written English. These tools have helped me understand programming concepts, refine my code, and enhance my academic writing. However, all critical thinking, analysis, and final decisions in this assignment are my own, ensuring that I have fairly and ethically used AI as a learning aid rather than a substitute for my own work.
 
+https://chatgpt.com/share/6836f78d-290c-8010-b9b1-887e4857ada8
