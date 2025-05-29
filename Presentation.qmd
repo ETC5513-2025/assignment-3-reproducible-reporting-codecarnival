@@ -70,7 +70,7 @@ Understanding these patterns helps explain airline pricing strategies and sets r
 -   **Nonstop, low circuity flights:** highest fare per mile (**0.247**)
 -   **High circuity, with stops:** higher fare (**0.173**) than low circuity, with stops (**0.161**)
 -   No nonstop flights in high circuity group
--   Table and plot highlight clear pricing patterns
+-   Plot highlights clear pricing patterns
 :::
 
 ::: {.column width="45%"}
