@@ -49,7 +49,7 @@ Understanding these patterns helps explain airline pricing strategies and sets r
 
 # Methods
 
--   **Data:** Airline Market Fare Prediction (DB1B dataset)
+-   **Data:** Airline Market Fare Prediction 
 
 -   Calculated fare per mile for each itinerary
 
