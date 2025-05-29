@@ -100,26 +100,33 @@ ggplot(MarketFarePredictionData, aes(x = CircuityGroup, y = Fare_per_mile, fill 
 :::
 :::::
 
-# Conclusions and/or recommendations
+# Conclusions
+
+::::: columns
+::: {.column width="65%"}
+
+- ✈️ **Nonstop, low-circuity flights** have the **highest fare per mile** — travelers pay more for speed and convenience.
+- 🔁 **Higher circuity** (indirect) routes cost **more per mile**, even when they include stopovers.
+- 🚫 **No nonstop flights** exist in high-circuity routes — airlines avoid inefficient direct paths.
+
+📌 **Key Insight**  
+Fare pricing reflects both **route efficiency** and **flight type**.  
+Stopovers don’t always reduce fares — especially on inefficient routes.
+
+:::
+:::::
+
+
+# Recommendations
 
 ::::: columns
 ::: {.column width="60%"}
-- ✈️ **Nonstop, low-circuity flights** have the **highest fare per mile** — travelers pay more for speed and convenience.
-- 🔄 **Higher circuity** routes (indirect paths) tend to cost **more per mile**, even with stopovers.
-- 🚫 No nonstop flights exist in high-circuity routes — airlines avoid inefficient direct paths.
 
-📌 **Takeaway**: Fare pricing reflects both **route efficiency** and **flight type**.  
-**Stopovers** don’t always lead to cheaper fares if the route is highly indirect.
+📢 **Practical Guidance:**
+
+- 💰 **Budget travelers** → choose **low-circuity routes with stopovers** for best value.
+- ✈️ **Airlines** → use circuity data to refine **pricing and route planning**.
+- 📊 **Analysts** → investigate **market share**, **LCC presence**, and **multi-airport markets** as additional drivers of fare differences.
+
 :::
-
-
-::::: columns
-::: {.column width="50%"}
-📢 Recommendations:
-
-💰 Budget-conscious travelers: prefer low-circuity routes with stopovers.
-
-🧭 Airlines: use circuity and stopover data to optimize route planning and pricing.
-
-📊 Analysts: explore other drivers of fare variability (e.g., market share, LCC presence).
-:::
+:::::
