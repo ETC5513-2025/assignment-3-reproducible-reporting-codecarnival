@@ -11,6 +11,7 @@ format:
     margin: 0.05
     embed-resources: true
     theme: solarized
+incremental: true
 editor: visual
 ---
 
