@@ -1,6 +1,23 @@
 ---
-title: "Report"
-format: pdf
+title: "Impact of Route Efficiency and Stopovers on Airline Fare Pricing"
+author:
+  - Jingwei Zhao
+  - Jyovika Aswale
+  - Rimlan Alva
+
+format:
+  pdf:
+    documentclass: report
+    toc: true
+    toc-depth: 2
+    fontsize: 10pt
+    papersize: a4
+    colorlinks: true
+    mainfont: "Times New Roman"
+    sansfont: "Arial"
+    monofont: "Courier New"
+    include-in-header: preamble.tex
+
 editor: visual
 ---
 
