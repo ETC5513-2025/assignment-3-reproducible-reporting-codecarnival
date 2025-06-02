@@ -1,6 +1,5 @@
 ---
 title: "Impact of Route Efficiency and Stopovers on Airline Fare Pricing"
-title: "Impact of Route Efficiency and Stopovers on Airline Fare Pricing"
 author:
   - Jingwei Zhao
   - Jyovika Aswale
