@@ -15,8 +15,7 @@ format:
     colorlinks: true
     mainfont: "Times New Roman"
     sansfont: "Arial"
-    monofont: "Courier New"
-    include-in-header: preamble.tex
+    monofont: "Courier New" 
 
 editor: visual
 ---
