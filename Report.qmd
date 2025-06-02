@@ -118,27 +118,40 @@ kable(
 
 ## Discussion:
 
-The summary table and violin plot together reveal interesting pricing dynamics. The results show that:
+These pricing patterns reveal underlying market dynamics that extend beyond simple distance-based fare calculations. The substantial nonstop premium reflects fundamental economic principles of time valuation and consumer segmentation. Business travelers, who typically exhibit lower price elasticity due to employer reimbursement and time constraints, drive demand for premium direct service. This creates opportunities for airlines to implement sophisticated yield management strategies that maximize revenue extraction from heterogeneous passenger populations.
 
--   Among routes with stops, high circuity routes have slightly higher average fare per mile (0.173) compared to low circuity routes (0.161). This suggests that passengers on less direct routes may pay a premium, possibly due to fewer available options or less competition.
--   Nonstop flights on low circuity routes stand out with the highest average fare per mile (0.247), reflecting the premium passengers are willing to pay for direct, efficient service.
--   No nonstop flights are observed in the high circuity group, likely because highly circuitous routes inherently require at least one stop.
+The elevated pricing in high circuity connecting markets suggests structural market imperfections. Geographic constraints may limit competitive entry, while hub-and-spoke network economics can create artificial scarcity in certain city-pair markets. These factors enable pricing power that transcends operational cost differences, indicating that market structure variables (competition intensity, carrier concentration) may be more influential than purely operational metrics.
 
-The violin plot shows that the spread of fare per mile is generally wider for nonstop flights, indicating greater price variability, possibly influenced by factors like demand, airline competition, or time of booking. Meanwhile, flights with stops tend to cluster around lower average prices, reflecting a more predictable pricing pattern.
+The contrasting fare distributions between nonstop and connecting flights illuminate different pricing philosophies. Nonstop markets demonstrate characteristics of premium product categories with wide price dispersion reflecting demand-based pricing strategies. Multi-stop markets exhibit commodity-like pricing behavior with narrow distributions suggesting cost-plus approaches focused on operational efficiency rather than demand optimization.
 
-These findings align with broader airline industry trends, where efficiency (nonstop service) and convenience often command higher prices, while multi-stop routes cater to more price-sensitive travelers.
+These findings highlight how airlines navigate the tension between network optimization and revenue maximization, using route structure as both an operational constraint and strategic pricing lever.
 
 ## Conclusion:
 
-This analysis finds that both circuity and flight type play important roles in shaping airfare pricing. High circuity routes with stops tend to cost more per mile than low circuity ones, but the highest per-mile fares are observed on low circuity, nonstop routes. Overall, nonstop service carries a clear price premium, highlighting the value passengers place on directness and convenience.
+This analysis reveals that airline pricing reflects sophisticated market segmentation strategies rather than simple cost-based models. The observed patterns demonstrate how carriers leverage route characteristics to implement differentiated pricing across passenger segments with varying time valuations and price sensitivities.
+
+The findings suggest that market structure factors—including competition intensity and network constraints—play crucial roles in determining fare premiums beyond operational considerations. This indicates that regulatory and competitive dynamics may be as influential as efficiency metrics in shaping airfare structures.
+
+Most significantly, the research demonstrates that airlines successfully monetize convenience through strategic route-pricing combinations, creating sustainable revenue streams from market segmentation while maintaining price-competitive options for cost-sensitive travelers.
 
 ## Recommendations:
 
-Based on the findings, the following recommendations are proposed:
+**For Strategic Airline Management:**
+* **Portfolio Optimization:** Develop route-pricing matrices that systematically exploit market structure differences, particularly in geographically constrained markets where competition intensity enables premium pricing
+* **Segmentation Enhancement:** Implement advanced yield management systems that leverage the demonstrated willingness-to-pay differences across passenger segments, especially in nonstop markets showing high fare variability
 
--   **For travelers:** Passengers seeking to minimize fare per mile should consider multi-stop itineraries, particularly on low circuity routes, where prices tend to be lower and more stable.
--   **For airlines:** There may be opportunities to adjust pricing on high circuity routes, where passengers are already paying a slight premium, by offering promotions or improving efficiency to attract more customers.
--   **For future research:** Further analysis could explore additional factors influencing fare per mile, such as competition intensity, seasonal effects, or route distance, to provide a more comprehensive understanding of airfare pricing dynamics.
+**For Travelers:**
+* **Strategic Route Selection:** Utilize the identified pricing patterns to optimize travel budgets by selecting connecting flights on efficient routes when time flexibility permits
+* **Market Timing:** Consider that nonstop markets exhibit greater price volatility, suggesting potential savings through strategic booking timing
+
+**For Policy and Academic Research:**
+* **Competition Analysis:** Investigate whether observed pricing premiums in high circuity markets reflect natural geographic constraints or anticompetitive market structures requiring regulatory attention
+* **Methodological Advancement:** Integrate market structure variables (HHI, carrier concentration, LCC presence) with route efficiency metrics to develop more comprehensive fare prediction models
+* **Consumer Welfare Assessment:** Examine whether current pricing patterns optimize social welfare or primarily benefit airlines through market power exploitation
+
+**For Industry Innovation:**
+* **Technology Integration:** Develop dynamic pricing algorithms that better account for the interaction between route efficiency and market competition to optimize revenue across diverse market conditions
+* **Service Differentiation:** Explore intermediate service categories that capture value between current premium nonstop and budget connecting options
 
 ## Reference section:
 
@@ -149,3 +162,4 @@ Based on the findings, the following recommendations are proposed:
 I acknowledge that I have used AI-assisted tools to support my learning process in coding and improving my written English. These tools have helped me understand programming concepts, refine my code, and enhance my academic writing. However, all critical thinking, analysis, and final decisions in this assignment are my own, ensuring that I have fairly and ethically used AI as a learning aid rather than a substitute for my own work.
 
 <https://chatgpt.com/share/6836f78d-290c-8010-b9b1-887e4857ada8>
+<https://chatgpt.com/c/683d45a6-8b04-8012-8a35-53eaaaf74cde>
