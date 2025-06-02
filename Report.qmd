@@ -47,3 +47,5 @@ editor: visual
 
 I acknowledge that I have used AI-assisted tools to support my learning process in coding and improving my written English. These tools have helped me understand programming concepts, refine my code, and enhance my academic writing. However, all critical thinking, analysis, and final decisions in this assignment are my own, ensuring that I have fairly and ethically used AI as a learning aid rather than a substitute for my own work.
 
+<https://chatgpt.com/share/6836f78d-290c-8010-b9b1-887e4857ada8>
+
