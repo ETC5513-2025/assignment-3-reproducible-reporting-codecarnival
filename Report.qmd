@@ -4,26 +4,33 @@ author:
   - Jingwei Zhao
   - Jyovika Aswale
   - Rimlan Alva
-format: 
- pdf :
+format:
+  pdf:
+    documentclass: report
     toc: true
-    number-sections: true
     toc-depth: 2
+    fontsize: 10pt
+    papersize: a4
+    colorlinks: true
+    mainfont: "Times New Roman"
+    sansfont: "Arial"
+    monofont: "Courier New" 
+
 editor: visual
 ---
-
-# Executive summary:
+\clearpage
+## Executive summary:
 
 This report analyzes airline fare data to uncover key factors influencing ticket prices. Using data from a public Kaggle dataset, we explore how variables like airline, number of stops, and departure time affect fare amounts. Our analysis identifies clear pricing trends based on travel class, airline choice, and route structure. These findings can support consumers in making cost-effective travel decisions and provide insight for airline pricing strategies.
 
 
-# Introduction:
+## Introduction:
 
 Airline fare pricing is shaped by multiple operational and market factors, including route design, efficiency, and the number of stopovers. One key measure, **circuity**, captures how indirect a flight path is relative to the shortest possible route. Another important factor is whether a flight is **nonstop** or involves one or more stopovers. Travelers often perceive nonstop flights as faster and more convenient, which can influence both demand and pricing.
 
 This study focuses on two main research questions: (1) Do routes with higher circuity (i.e., more indirect paths) command a higher fare per mile compared to near-straight flights? (2) Are nonstop flights more expensive than flights with one or more stops? Using a large dataset combining the U.S. Department of Transportation’s DB1B and T-100 data, this analysis explores how circuity and stopovers influence airline fares across over 1.5 million samples. By investigating these relationships, the study offers insights relevant to both consumers making travel decisions and airlines designing pricing strategies.
 
-# Methodology:
+## Methodology:
 
 To address our research questions, we analyzed the Airline Market Fare Prediction Data, sourced from the [DB1B dataset](https://www.kaggle.com/datasets/orvile/airline-market-fare-prediction-data). The objectives of our analysis were twofold:\
 1. To determine whether routes with higher circuity—meaning more indirect paths—are associated with higher fare per mile.\
@@ -87,9 +94,9 @@ ggplot(MarketFarePredictionData, aes(x = CircuityGroup, y = Fare_per_mile, fill 
   theme_minimal()
 ```
 
-# Results:
+## Results:
 
-Table @tbl-summary presents the mean fare per mile by circuity group and flight type. The analysis demonstrates two key findings. First, routes classified as high circuity with stops have a higher average fare per mile (0.173) than low circuity routes with stops (0.161), suggesting that passengers pay a premium for less direct travel. Second, nonstop flights on low circuity routes exhibit the highest fare per mile (0.247), reflecting a significant price premium for direct, efficient service.
+@tbl-summary-2 presents the mean fare per mile by circuity group and flight type. The analysis demonstrates two key findings. First, routes classified as high circuity with stops have a higher average fare per mile (0.173) than low circuity routes with stops (0.161), suggesting that passengers pay a premium for less direct travel. Second, nonstop flights on low circuity routes exhibit the highest fare per mile (0.247), reflecting a significant price premium for direct, efficient service.
 
 Notably, no nonstop flights are observed within the high circuity group, likely because such routes inherently require one or more stops. Overall, these results indicate that both increased circuity and nonstop service are associated with higher fare per mile, while the lowest fares are found on low circuity, multi-stop itineraries. These findings highlight how airlines price both efficiency and convenience in the market.
 
@@ -108,7 +115,7 @@ kable(
   row_spec(0, bold = TRUE, color = "white", background = "#80DEEA")
 ```
 
-# Discussion:
+## Discussion:
 
 The summary table and violin plot together reveal interesting pricing dynamics. The results show that:
 
@@ -120,11 +127,11 @@ The violin plot shows that the spread of fare per mile is generally wider for no
 
 These findings align with broader airline industry trends, where efficiency (nonstop service) and convenience often command higher prices, while multi-stop routes cater to more price-sensitive travelers.
 
-# Conclusion:
+## Conclusion:
 
 This analysis finds that both circuity and flight type play important roles in shaping airfare pricing. High circuity routes with stops tend to cost more per mile than low circuity ones, but the highest per-mile fares are observed on low circuity, nonstop routes. Overall, nonstop service carries a clear price premium, highlighting the value passengers place on directness and convenience.
 
-# Recommendations:
+## Recommendations:
 
 Based on the findings, the following recommendations are proposed:
 
@@ -132,7 +139,7 @@ Based on the findings, the following recommendations are proposed:
 -   **For airlines:** There may be opportunities to adjust pricing on high circuity routes, where passengers are already paying a slight premium, by offering promotions or improving efficiency to attract more customers.
 -   **For future research:** Further analysis could explore additional factors influencing fare per mile, such as competition intensity, seasonal effects, or route distance, to provide a more comprehensive understanding of airfare pricing dynamics.
 
-# Reference section:
+## Reference section:
 
 1.  *Airline Market Fare Prediction Data.*, from <https://www.kaggle.com/datasets/orvile/airline-market-fare-prediction-data>
 
@@ -140,4 +147,4 @@ Based on the findings, the following recommendations are proposed:
 
 I acknowledge that I have used AI-assisted tools to support my learning process in coding and improving my written English. These tools have helped me understand programming concepts, refine my code, and enhance my academic writing. However, all critical thinking, analysis, and final decisions in this assignment are my own, ensuring that I have fairly and ethically used AI as a learning aid rather than a substitute for my own work.
 
-https://chatgpt.com/share/6836f78d-290c-8010-b9b1-887e4857ada8
+<https://chatgpt.com/share/6836f78d-290c-8010-b9b1-887e4857ada8>
