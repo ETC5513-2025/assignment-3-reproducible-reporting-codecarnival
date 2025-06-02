@@ -161,6 +161,8 @@ Most significantly, the research demonstrates that airlines successfully monetiz
 
 I acknowledge that I have used AI-assisted tools to support my learning process in coding and improving my written English. These tools have helped me understand programming concepts, refine my code, and enhance my academic writing. However, all critical thinking, analysis, and final decisions in this assignment are my own, ensuring that I have fairly and ethically used AI as a learning aid rather than a substitute for my own work.
 
-<https://chatgpt.com/share/6836f78d-290c-8010-b9b1-887e4857ada8>
-<https://chatgpt.com/c/683d45a6-8b04-8012-8a35-53eaaaf74cde>
-<https://chatgpt.com/share/683d591a-2e20-8000-9313-1d5781fc0ddc>
+* [AI link from Jyovika]("https://chatgpt.com/share/6836f78d-290c-8010-b9b1-887e4857ada8")
+
+* [AI link from Jingwei]("https://chatgpt.com/c/683d45a6-8b04-8012-8a35-53eaaaf74cde")
+
+* [AI link from Rimlan]("https://chatgpt.com/share/683d591a-2e20-8000-9313-1d5781fc0ddc")
